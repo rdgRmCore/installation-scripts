@@ -24,7 +24,7 @@ rvm install 2.2.1
 rvm use 2.2.1 --default
 
 gem install bundler --no-rdoc --no-ri
-gem install rails --no-rdoc --no-ri
+gem install rails -v 4.2.2 --no-rdoc --no-ri
 
 echo "Installs text editor"
 sudo yum install gedit -y

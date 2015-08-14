@@ -12,6 +12,9 @@ sudo yum install make automake gcc gcc-c++ kernel-devel patch libffi-devel libto
 echo "Installs ImageMagick for image processing"
 sudo yum install ImageMagick -y
 
+echo "Get keys prior to RVM install"
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+
 echo "Installs RVM (Ruby Version Manager) for handling Ruby installation"
 curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm

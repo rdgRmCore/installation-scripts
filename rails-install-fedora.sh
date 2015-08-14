@@ -17,11 +17,11 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 
 echo "Installs RVM (Ruby Version Manager) for handling Ruby installation"
 curl -L get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
+source /usr/local/rvm/scripts/rvm
 
 echo "Installs Ruby"
-rvm install 1.9.3-p547
-rvm use 1.9.3-p547 --default
+rvm install 2.2.1
+rvm use 2.2.1 --default
 
 gem install bundler --no-rdoc --no-ri
 gem install rails --no-rdoc --no-ri

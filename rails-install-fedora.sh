@@ -7,7 +7,11 @@ echo "Updates packages. Asks for your password."
 sudo yum update -y
 
 echo "Installs packages. Give your password when asked."
-sudo yum install make automake gcc gcc-c++ kernel-devel patch libffi-devel libtool bison openssl readline readline-devel curl git-core zlib zlib-devel openssl-devel libyaml-devel sqlite sqlite-devel libxml2 libxml2-devel libxslt-devel autoconf glibc-devel nodejs -y
+sudo yum install make automake gcc gcc-c++ kernel-devel patch libffi-devel libtool bison openssl readline readline-devel curl git-core zlib zlib-devel openssl-devel libyaml-devel sqlite sqlite-devel libxml2 libxml2-devel libxslt-devel autoconf glibc-devel -y
+
+echo "Install nodejs"
+curl --silent --location https://rpm.nodesource.com/setup | bash -
+yum -y install nodejs
 
 echo "Installs ImageMagick for image processing"
 sudo yum install ImageMagick -y

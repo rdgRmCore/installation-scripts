@@ -23,6 +23,10 @@ echo "Installs RVM (Ruby Version Manager) for handling Ruby installation"
 curl -L get.rvm.io | bash -s stable
 source /usr/local/rvm/scripts/rvm
 
+echo "open port 3000 in the iptables firewall"
+iptables -I INPUT 5 -i eth0 -p tcp --dport 3000 -m state --state NEW,ESTABLISHED -j ACCEPT
+service iptables save
+
 echo "Installs Ruby"
 rvm install 2.2.1
 rvm use 2.2.1 --default
